@@ -1,8 +1,8 @@
 
 #include "sch.h"
 
-//void Timer2_Init_1ms(void);
-//void Timer2_Init_2ms(void);
+//void Timer2_Init_1ms(void);	OSæœ€å°æ—¶é—´é—´éš”ï¼Œè®¾ç½®æˆ1ms
+//void Timer2_Init_2ms(void);	OSæœ€å°æ—¶é—´é—´éš”ï¼Œè®¾ç½®æˆ2ms
 
 // ------ Public variable declarations -----------------------------
 
@@ -19,7 +19,7 @@ void Timer2_Init_1ms()
 	// 16bit timer, period = 1.000000mS   @4MHz        @Fx 8M
 	T2CRH = 0x00;   	// timer setting High
 	T2CRL = 0xA0;   	// timer setting Low      Fx/4 0x80---Fx/2 0xa0---Fx 0xc0
-	T2ADRH = 0x15;  	// period count High      ÀíÂÛ4000           Êµ²â5405ÊÇ1ms      5389ÏÂ500.67ms
+	T2ADRH = 0x15;  	// period count High      ç†è®º4000           å®æµ‹5405æ˜¯1ms      5389ä¸‹500.67ms
 	T2ADRL = 0x0D;  	// period count Low
 	IE2 |= 0x08;    	// Enable Timer2 interrupt
 //	T2CRH |= 0x80;  	// enable counter
@@ -47,7 +47,7 @@ void Timer2_Init_2ms()
 	// 16bit timer, period = 1.000000mS   @4MHz        @Fx 8M
 	T2CRH = 0x00;   	// timer setting High
 	T2CRL = 0x80;   	// timer setting Low      Fx/4 0x80---Fx/2 0xa0---Fx 0xc0
-	T2ADRH = 0x15;  	// period count High      ÀíÂÛ4000           Êµ²â5405ÊÇ1ms      5389ÏÂ500.67ms
+	T2ADRH = 0x15;  	// period count High      ç†è®º4000           å®æµ‹5405æ˜¯1ms      5389ä¸‹500.67ms
 	T2ADRL = 0x0D;  	// period count Low
 	IE2 |= 0x08;    	// Enable Timer2 interrupt
 //	T2CRH |= 0x80;  	// enable counter
